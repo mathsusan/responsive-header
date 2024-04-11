@@ -56,6 +56,9 @@ ul {
 .menu a:hover {
   background-color: var(--gray);
 }
+.menu a.selected {
+  background-color: var(--gray);
+}
 .nav {
   max-height: 0;
   transition: max-height 0.5s ease-out;
