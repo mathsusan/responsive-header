@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="header.css" />
+    <script type="text/javascript" src="mobile-menu.js"></script>
+  </head>
+  <body>
+    <header id="header" class="header">
+      <nav>
+        <a href="#" class="logo">
+          <div>LOGO</div>
+        </a>
+        <div>
+          <button
+            class="menuButton"
+            type="button"
+            aria-label="Toggle navigation"
+            onclick="toggleFunction()"
+          >
+            Menu
+          </button>
+          <div>
+            <ul>
+              <li class="closeButton">
+                <button
+                  type="button"
+                  aria-label="Toggle navigation"
+                  onclick="toggleFunction()"
+                >
+                  Close Menu
+                </button>
+              </li>
+              <li>
+                <a
+                  routerLink="/portfolio/aboutMe"
+                  routerLinkActive="active"
+                  >About Me</a
+                >
+              </li>
+              <li>
+                <a
+                  routerLink="/portfolio/design-portfolio"
+                  routerLinkActive="active"
+                  >Design Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  routerLink="/portfolio/development-portfolio"
+                  routerLinkActive="active"
+                  >Development Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  routerLink="/portfolio/fun-stuff"
+                  routerLinkActive="active"
+                  >Fun Stuff</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+  </body>
+</html>
