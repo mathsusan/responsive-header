@@ -2,54 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <!-- App title -->
-    <title>Responsive Menu</title>
-    <!-- Link CSS file -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
     <script type="text/javascript" src="./mobile-menu.js"></script>
+    <title>Document</title>
   </head>
   <body>
-    <!-- Navigation bar -->
-    <header class="header" id="header">
-      <!-- Logo -->
-      <a href="#" class="logo">LR</a>
-      <!-- for mobile menu -->
-      <button
-        class="side-menu"
-        onclick="toggleFunction()"
-        aria-label="toggle menu"
-      >
-        <!-- Hamburger icon -->
-        <div class="hamb">
-          <span class="hamb-line"></span>
-        </div>
-      </button>
-      <!-- Menu -->
-      <nav class="nav">
-        <ul class="menu" role="menu">
-          <li role="menuitem">
-            <a href="#" class="menu-link">Gallery</a>
+    <header id="main-header" class="fixed-top">
+      <nav class="navbar" id="navbar">
+        <a class="logo" href="#">LOGO</a>
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          onclick="toggleFunction()"
+          aria-label="toggle navigation"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li>
+            <a href="#">Our Service</a>
           </li>
-          <li role="menuitem">
-            <a href="#" class="menu-link">Blog</a>
+          <li>
+            <a href="#">About Us</a>
           </li>
-          <li role="menuitem">
-            <a href="#" class="menu-link">About</a>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+          <li>
+            <a href="#">Support</a>
           </li>
         </ul>
       </nav>
     </header>
-    <!-- Main content -->
     <main>
-      <article>
-        <h1>Some content</h1>
-        <p>More Content</p>
-      </article>
+      <h1>Title of the page</h1>
+      Main content here
     </main>
+    <footer>footer content here</footer>
   </body>
 </html>

@@ -1,0 +1,143 @@
+/* vaariables for colors */
+:root {
+  --header-background: #333;
+  --header-text-color: #fff;
+  --header-link-hover-color: #818181;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* main navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: var(--header-background);
+  color: var(--header-text-color);
+  padding: 0.13rem;
+}
+
+/* this is setting the height when closed */
+.logo {
+  color: var(--header-text-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+/* navbar links */
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  background-color: var(--header-link-hover-color);
+}
+.nav-links li,
+.nav-links a {
+  color: var(--header-text-color);
+  text-decoration: none;
+  font-size: 1.25rem;
+  padding: 1rem;
+}
+
+/* menu button */
+.menu-toggle {
+  display: none;
+  background-color: transparent;
+  border: none;
+  padding: 0.25rem;
+  margin: 1rem 0;
+}
+.bar {
+  height: 3px;
+  width: 25px;
+  margin: 3px 0;
+  background-color: white;
+}
+.bar:first-of-type,
+.bar:last-of-type {
+  background: white;
+  transition: all 0.2s ease-out;
+}
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: var(--header-link-hover-color);
+  cursor: pointer;
+}
+
+/* nav mobile with menu open  */
+.open .nav-links {
+  display: flex;
+  height: 300px;
+}
+/* change the hamburger to an x */
+.open .bar:nth-of-type(2) {
+  background: transparent;
+}
+.open .bar:first-of-type {
+  transform: translate(-2px, -2px) rotate(135deg) translate(4px, -6px);
+}
+.open .bar:last-of-type {
+  transform: translate(-2px, -2px) rotate(45deg) translate(-2px, -4px);
+}
+
+main {
+  padding-top: 4rem;
+}
+
+/* media query for small screens */
+@media all and (max-width: 600px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+  /* show menu button */
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    /* display: none; */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: var(--header-background);
+    border-top: 1px solid white;
+    overflow: hidden;
+    height: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  .nav-links li {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+  .nav-links a {
+    width: 100%;
+    padding: 1.25rem 2rem;
+  }
+  .nav-links a:hover {
+    background-color: var(--header-link-hover-color);
+  }
+}
