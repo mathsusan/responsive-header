@@ -75,7 +75,6 @@
 }
 .bar:first-of-type,
 .bar:last-of-type {
-  background: white;
   transition: all 0.2s ease-out;
 }
 .menu-toggle:hover,
